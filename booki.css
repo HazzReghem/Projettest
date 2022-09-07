@@ -323,7 +323,7 @@ span
     border: 1px solid #F2F2F2;
     background-color: #F2F2F2;
     border-radius: 20px;
-    height: 600px;
+    height: 630px;
     width: 70%;
     margin-right: 35px;
     padding: 1% 3% 1% 3%;
@@ -351,7 +351,7 @@ span
 {
     list-style-type: none;
     width: 30%;
-    /* height: 180px; */
+    height: 230px;
     border: 5px solid white;
     background-color: white;
     border-radius: 20px;
@@ -366,6 +366,8 @@ span
     text-decoration: none;
     color: black;
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .card_image
@@ -378,9 +380,11 @@ span
 .card_image img
 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-#card1 .card_image img, #card2 .card_image img 
+/* #card1 .card_image img, #card2 .card_image img 
 {
     transform: translate(0%, -15%);
 }
@@ -398,6 +402,15 @@ span
 #card6 .card_image img
 {
     transform: translate(0%, -35%);
+} */
+
+.card_desc 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 45%;
 }
 
 #card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover, #card6:hover
@@ -405,7 +418,7 @@ span
     box-shadow: 0px 0px 20px grey;
 }
 
-.card_body
+.card_title
 {
     padding-left: 5%;
     font-size: 90%;
@@ -417,9 +430,15 @@ span
     font-size: 90%;
 }
 
-.card_body, .card_price, .card_rate
+.card_title, .card_price, .card_rate
 {
-    line-height: 20%;
+    line-height: 90%;
+}
+
+.card_title h4 
+{
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .card_rate
@@ -446,7 +465,7 @@ span
     border: 1px solid #F2F2F2;
     background-color: #F2F2F2;
     width: 30%;
-    height: 600px;
+    height: 630px;
     border-radius: 20px;
     padding: 1% 3% 1% 3%;
     /* padding-right: 5%; */
@@ -514,30 +533,39 @@ span
 
 #pop_card1 .pop_card_image img
 {
-    height: 130%;
-    /* width: 150%; */
-    transform: translate(-20%, -20%);
+    height: 100%;
+    width: 100%;
+    transform: translate(0%);
+    object-fit: cover;
 }
 
-#pop_card2 .pop_card_image
+/* #pop_card2 .pop_card_image
 {
     width: 60%;
-}
+} */
 
 #pop_card2 .pop_card_image img
 {
     height: 100%;
-    transform: translate(-15%, 0%);
+    width: 100%;
+    transform: translate(0%);
+    object-fit: cover;
 }
 
 
 #pop_card3 .pop_card_image img
 {
-    height: 130%;
-    width: 110%;
-    transform: translate(-5%, -10%);
+    height: 100%;
+    width: 100%;
+    transform: translate(0%);
+    object-fit: cover;
 }
 
+.pop_card_title h4
+{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
 
 .pop_card_title, .pop_card_price, .pop_card_rate
 {
@@ -557,22 +585,23 @@ span
     color: lightgray;
 }
 
-.pop_card_price
+/* .pop_card_price
 {
     position: relative;
     bottom: 25px;
-}
+} */
 
 .pop_card_desc
 {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 10px;
     flex-wrap: nowrap;
     padding-right: 5px;
     justify-content: space-between;
     align-items: flex-start;
     height: 95%;
+    width: 65%;
 }
 
 
@@ -865,6 +894,11 @@ footer a:hover
         width: auto;
     }
 
+    nav 
+    {
+        width: 25%;
+        font-size: 90%;
+    }
 
     #recherche input[type=search]
     {
@@ -908,7 +942,14 @@ footer a:hover
 
     #card1, #card2, #card3, #card4, #card5, #card6
     {
-        margin-bottom: 30px;
+        margin-bottom: 3%;
+        width: 31%;
+        height: 185px;
+    }
+
+    .card_desc
+    {
+        height: 50%;
     }
 
     .card_title
@@ -928,30 +969,30 @@ footer a:hover
 
     /* ------------------------POPULAIRES-------------------- */
 
-    .pop_card_image
+    /* .pop_card_image
     {
         width: 70%;
-    }
+    } */
 
-    #pop_card2 .pop_card_image
+    /* #pop_card2 .pop_card_image
     {
         width: 100%;
-    }
+    } */
     
     #pop_card2 .pop_card_image img
     {
-        transform: translate(-35%, 0%);
+        transform: translate(-0%, 0%);
     }
 
-    #pop_card2 .pop_card_rate
+    /* #pop_card2 .pop_card_rate
     {
         position: relative;
         top: -10px;
-    }
+    } */
 
     #pop_card3 .pop_card_image img
     {
-        transform: translate(0%, -20%);
+        transform: translate(0%, 0%);
     }
 
     .pop_card_desc
@@ -1012,6 +1053,7 @@ footer a:hover
     {
         width: 100%;
         margin-left: 0px;
+        margin-right: 0px;
     } 
     
 
@@ -1099,6 +1141,11 @@ footer a:hover
         color: #0065FC;
     }
 
+    nav li:hover 
+    {
+        border-top: none;
+    }
+
     nav li 
     {
         margin: 0;
@@ -1123,13 +1170,15 @@ footer a:hover
         margin-bottom: 25px;
         margin-top: 25px;
         width: 95%;
-        margin-right: 20px;
+        /* margin-right: 20px; */
         margin-left: 20px;
     }
 
     #recherche
     {
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     #localize
@@ -1198,6 +1247,9 @@ footer a:hover
         font-size: 115%;
         padding-left: 10px;
         padding-right: 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     #economie
@@ -1323,35 +1375,50 @@ footer a:hover
     #pop_card1 .pop_card_image img 
     {
         height: 100%;
-        transform: translate(-15%, 0%);
+        width: 100%;
+        transform: translate(-0%, 0%);
+        object-fit: cover;
     }
 
-    #pop_card2 .pop_card_image
+    /* #pop_card2 .pop_card_image
     {
         width: 68%;
-    }
+    } */
 
     #pop_card2 .pop_card_image img 
     {
-        transform: translate(-25%,0%);
+        transform: translate(0%,0%);
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     #pop_card3 .pop_card_image img 
     {
-        height: 130%;
-        width: 110%;
-        transform: translate(-10%, -10%);
+        height: 100%;
+        width: 100%;
+        transform: translate(0%, 0%);
+        object-fit: cover;
     }
 
     .pop_card_desc
     {
         /* font-size: 200%; */
-        padding-left: 20px;
+        padding-left: 10px;
         margin: 0;
-        position: relative;
-        bottom: 15px;
+        /* position: relative;
+        bottom: 15px; */
         padding-right: 0;
         flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    
+    .pop_card_title h4
+    {
+        margin-top: 10px;
+        margin-bottom: 0px;
     }
 
     .pop_card_title
@@ -1362,7 +1429,11 @@ footer a:hover
     .pop_card_price
     {
         font-size: 130%;
-        bottom: 30px;
+    }
+
+    .pop_card_price p 
+    {
+        margin: 0;
     }
 
     .pop_card_rate
@@ -1372,7 +1443,7 @@ footer a:hover
         top: 100px; */
         display: flex;
         justify-content: flex-start;
-        margin-top: 30px;
+        margin-top: 0px;
     }
 
     #populaires a 
@@ -1406,8 +1477,7 @@ footer a:hover
     #hebergements ul 
     {
         display: flex;
-        flex-direction: column;
-        
+        /* flex-direction: column; */
     }
 
     #card1, #card2, #card3, #card4, #card5, #card6 
@@ -1423,7 +1493,7 @@ footer a:hover
         height: 125px;
     }
 
-    .card_body
+    .card_title
     {
         font-size: 150%;
         padding-left: 10px;
@@ -1435,17 +1505,27 @@ footer a:hover
         padding-left: 10px;
     }
 
+    .card_price p 
+    {
+        margin: 0;
+    }
+
     .card_rate
     {
         font-size: 130%;
     }
 
-    .card_body, .card_price, .card_rate
+    .card_desc
     {
-        line-height: 0%;
+        height: 45%;
     }
 
-    #card1 .card_image img, #card2 .card_image img 
+    .card_title, .card_price, .card_rate
+    {
+        line-height: 100%;
+    }
+
+    /* #card1 .card_image img, #card2 .card_image img 
     {
         transform: translate(0%, -25%);
     }
@@ -1468,9 +1548,9 @@ footer a:hover
     #card6 .card_image img
     {
         transform: translate(0%, -40%);
-    }
+    } */
 
-    #card2 .card_price
+    /* #card2 .card_price
     {
         position: relative;
         bottom: 30px;
@@ -1537,7 +1617,7 @@ footer a:hover
     {
         position: relative;
         bottom: 10px;
-    }
+    } */
 
     /* ------------------------ACTIVITES---------------------- */
 
@@ -1574,6 +1654,11 @@ footer a:hover
     .activite_title
     {
         font-size: 130%;
+    }
+
+    .activite_title h4 
+    {
+        margin-top: 15px;
     }
 
     #activite1, #activite2, #activite3, #activite4, #activite5, #activite6
